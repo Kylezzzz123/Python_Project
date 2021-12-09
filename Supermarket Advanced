@@ -1,0 +1,31 @@
+# Set up a supermarket checkout.
+# this time include the wrong message return. 
+
+def start():
+  quan = 1
+  price = 0
+  end = False
+  total = 0
+  while end == False:
+    food = (input("Enter your food: "))
+    quan = int(input("Enter quantative: "))
+    price = float(input("Price of food: "))
+    disscount = float(input("Do you have disscount? enter '0' for no disccount. "))
+    end = input("Finish? y or n: ")
+    sum = price * quan
+    sub_total = sum - (sum * disscount * 0.01)
+    total += sub_total
+    if end == "y":  
+      print("Total price is ", total)
+      end = True
+    elif end == "n": 
+      end = False
+    else: 
+      again = input("Wrong message! Do you want to try again? enter 'y' to try again or 'n' to end: ")
+    if again == "y":  
+      return start()
+    if again == "n":
+      print("Bye!")
+      break 
+
+start()
