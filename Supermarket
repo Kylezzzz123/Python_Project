@@ -1,6 +1,4 @@
 # set up suptermarket checkout using while loop! 
-
-food = ""
 quan = 1
 price = 0
 total = 0
