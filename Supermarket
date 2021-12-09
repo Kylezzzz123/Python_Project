@@ -2,7 +2,7 @@
 def start():
   quan = 1
   price = 0
-  end = False
+  end = False # set the end is false because while end == false, we can keep looping
   total = 0
   while end == False:
     food = (input("Enter your food: "))
@@ -15,11 +15,11 @@ def start():
     total += sub_total
     if end == "y":  
       print("Total price is ", total)
-      end = True
+      end = True   # if end is equal to True, then end = True does not meet the while condition, then stop the loop
     elif end == "n": 
-      end = False
+      end = False   # if n is equal to false, then repeat it 
     else: 
-      print("Wrong message, please try again.")
-      return start()
+      print("Wrong message, please try again.")   
+      return start()       # return to the beginging from def and recalculate from the begining 
 
 start()
