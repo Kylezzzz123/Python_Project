@@ -1,3 +1,5 @@
+# setup a supermarket checkout using while loop and try to fix input error to return to start()
+
 def start():
   quan = 1
   price = 0
