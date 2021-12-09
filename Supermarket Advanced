@@ -1,6 +1,3 @@
-# Set up a supermarket checkout.
-# this time include the wrong message return. 
-
 def start():
   quan = 1
   price = 0
@@ -18,14 +15,15 @@ def start():
     if end == "y":  
       print("Total price is ", total)
       end = True
-    elif end == "n": 
+      break
+    elif end == "n":  
       end = False
-    else: 
+    else:
       again = input("Wrong message! Do you want to try again? enter 'y' to try again or 'n' to end: ")
-    if again == "y":  
-      return start()
-    if again == "n":
-      print("Bye!")
-      break 
-
+      if again == "y":     # if needs to be intented otherwise it hits the if statement without having defined "again", then you will get error. 
+         return start()
+      elif again == "n":
+        print("Bye!")
+        break 
+  
 start()
