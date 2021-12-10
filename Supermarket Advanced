@@ -6,22 +6,25 @@ def start():
   end = False
   total = 0
   while end == False:
-    food = (input("Enter your food: "))
-    quan = int(input("Enter quantative: "))
-    price = float(input("Price of food: "))
-    disscount = float(input("Do you have disscount? enter '0' for no disccount. "))
-    end = input("Finish? y or n: ")
-    sum = price * quan
-    sub_total = sum - (sum * disscount * 0.01)
-    total += sub_total
-    if end == "y":  
-      print("Total price is ", total)
-      end = True
-      break
-    elif end == "n":  
-      end = False
-    else:
-      again = input("Wrong message! Do you want to try again? enter 'y' to try again or 'n' to end: ")
+      try:   # added try because I want to use "except" to give a message when a value is incorrect. 
+        food = (input("Enter your food: "))
+        quan = int(input("Enter quantative: "))
+        price = float(input("Price of food: "))
+        disscount = float(input("Do you have disscount? enter '0' for no disccount. "))
+        end = input("Finish? y or n: ")
+        sum = price * quan
+        sub_total = sum - (sum * disscount * 0.01)
+        total += sub_total
+      except ValueError: # added except here to print out "Value Error!"
+          print("Value Error!")
+      if end == "y":  
+        print("Total price is ", total)
+        end = True
+        break
+      elif end == "n":  
+        end = False
+      else:
+        again = input("Wrong message! Do you want to try again? enter 'y' to try again or 'n' to end: ")
       if again == "y":     # if needs to be intented otherwise it hits the if statement without having defined "again", then you will get error. 
          return start()
       elif again == "n":
