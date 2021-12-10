@@ -15,6 +15,7 @@ Time = time(times[0],times[1], times[2])
 hour = True
 minute = True
 second = True
+
 def clock(): 
   while hour == True:
     Time1 = int(input(Time.hr))
