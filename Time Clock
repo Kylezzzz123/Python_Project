@@ -1,7 +1,5 @@
 # Create an input for hour, minute using class and while loop
 
-# Create an input for hour, minute using class and while loop
-
 class time:
   def __init__(self, hr, min, sec):
     self.hr = hr
