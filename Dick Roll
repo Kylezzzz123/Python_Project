@@ -21,10 +21,14 @@ def roll():
                 print("You Win!")
                 print("Your award is ", money)
                 game == False
-            if roll1 >= 5 or roll2 >= 5 or roll3 >=5:
-                print("Your money is ", money)
             else:
-                print("Loss, try again")
-                money -= 1
-                game == False
-        
+                    play = input("Loss, try again? y or n? ")
+                    if play == "y":
+                         money -= 1
+                         game == False
+                    elif play == "n":
+                        break
+              
+                    
+            
+roll()
