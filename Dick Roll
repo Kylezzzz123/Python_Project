@@ -22,13 +22,13 @@ def roll():
                 print("Your award is ", money)
                 game == False
             else:
-                    play = input("Loss, try again? y or n? ")
-                    if play == "y":
-                         money -= 1
-                         game == False
-                    elif play == "n":
-                        break
-              
-                    
-            
+                play = input("Loss, try again? y or n? ")
+                if play == "y":
+                   money -= 1
+                   game == False
+                elif play == "n":
+                     break
+                else:
+                    game == False 
+
 roll()
