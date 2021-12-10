@@ -1,0 +1,40 @@
+# Create an input for hour, minute using class and while loop
+
+# Create an input for hour, minute using class and while loop
+
+class time:
+  def __init__(self, hr, min, sec):
+    self.hr = hr
+    self.min = min
+    self.sec = sec
+times = [
+  "Your hours: ",
+  "Your minutes: ",
+  "Your seconds: "
+]
+
+Time = time(times[0],times[1], times[2])
+hour = True
+minute = True
+second = True
+def clock(): 
+  while hour == True:
+    Time1 = int(input(Time.hr))
+    if Time1 < 0 or Time1 > 24:  
+      hour == True
+    elif Time1 >= 0 or Time1 <= 24:
+      while minute == True: 
+        Time2 = int(input(Time.min))
+        if Time2 < 0 or Time2 > 60:
+          minute == True
+        elif Time2 > 0 or Time2 < 60:
+          while second == True:
+            Time3 = int(input(Time.hr))
+            if Time3 < 0 or Time3 > 60:
+              second == True
+            elif Time3 > 0 or Time3 < 60:
+              print("Your time: ", Time1, ":", Time2, ":", Time3)
+              return
+
+
+clock()
