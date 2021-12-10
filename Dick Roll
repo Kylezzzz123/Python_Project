@@ -1,0 +1,30 @@
+# roll 3 dicks to make something happen
+
+import random
+game = False
+game1 = False
+def roll():
+    money = 0
+    while game == False :
+            money += 1   
+            key = input("Please hit 'y' to roll the 3 dicks: ")
+            if key == "y":
+                roll1 = random.randint(0,10)
+                roll2 = random.randint(0,10)
+                roll3 = random.randint(0,10)
+                print("Roll 1,2,3 are: ", roll1, roll2, roll3)
+            else:
+                print("Invalid input, try again")
+                return roll()
+            if roll1 == roll2 == roll3:
+                money +=1
+                print("You Win!")
+                print("Your award is ", money)
+                game == False
+            if roll1 >= 5 or roll2 >= 5 or roll3 >=5:
+                print("Your money is ", money)
+            else:
+                print("Loss, try again")
+                money -= 1
+                game == False
+        
