@@ -1,4 +1,4 @@
-# roll 3 dicks to make something happen
+# roll 3 dices to make something happen
 
 import random
 game = False
@@ -7,7 +7,7 @@ def roll():
     money = 0
     while game == False :
             money += 1   
-            key = input("Please hit 'y' to roll the 3 dicks: ")
+            key = input("Please hit 'y' to roll the 3 dices: ")
             if key == "y":
                 roll1 = random.randint(0,10)
                 roll2 = random.randint(0,10)
